@@ -1,0 +1,65 @@
+:root{
+  --max: 1440px;
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --accent: #3466f2;
+  --open: #1aa65a;
+  --inprog: #f0a500;
+  --closed: #9aa5b1;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, sans-serif; margin:0; background:var(--bg); color:#153517; padding:8px 14px; line-height:1.6}
+.container{max-width:var(--max); margin:0 auto; padding:0 18px}
+.site-header{background:transparent; padding:14px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700; font-size:1.1rem; text-decoration:none; color:inherit}
+.main-nav a{margin-left:12px; text-decoration:none}
+.btn, .cta{background:var(--accent); color:white; padding:8px 14px; border-radius:10px; text-decoration:none; text-align: center;}
+.btn-outline{background:transparent; border:1px solid rgba(0,0,0,0.06); color:inherit}
+.btn-ghost{background:transparent; border:none; padding:6px}
+.btn-danger{background:transparent; color:#b00020; border:none}
+.app-root .main-content{padding:28px 0}
+.hero{position:relative; overflow:visible; padding-bottom:40px; background:linear-gradient(180deg,#eaf2ff 0%, #fff 60%)}
+.hero-inner{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:60px 0}
+.hero-body{max-width:680px; text-align: center;}
+.hero h1{font-size:2rem; margin:0 0 8px}
+.lead{color:#334155}
+.hero-cta{margin-top:16px; display:flex; gap:10px}
+.hero-deco .circle{position:absolute; border-radius:50%; opacity:0.9}
+.circle.small{width:80px; height:80px; background:#ffdce0; right:120px; top:40px}
+.circle.large{width:160px; height:160px; background:#dbeafe; left:40px; top:10px}
+.hero-wave{width:100%; height:80px; display:block}
+.features{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top: -40px}
+.card{background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+.auth-page{display:flex; justify-content:center; padding:48px 0}
+.auth-form{width:360px; background:var(--card); padding:18px; border-radius:12px}
+.auth-form label{display:block; margin-bottom:10px}
+.auth-form input, .auth-form select, .auth-form textarea{width:100%; padding:8px; border-radius:8px; border:1px solid #e6eef8}
+.field-error{color:#b00020; margin-top:6px}
+.stats-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px}
+.stat .stat-value{font-size:1.6rem; font-weight:700}
+.status-open{color:var(--open)}
+.status-warning{color:var(--inprog)}
+.status-closed{color:var(--closed)}
+.tickets-grid{display:grid; grid-template-columns:360px 1fr; gap:16px}
+.ticket-card{padding:12px; border-radius:10px; border:1px solid #edeff4; margin-bottom:10px}
+.ticket-main{display:flex; justify-content:space-between}
+.tag{padding:6px 8px; border-radius:999px; font-size:0.85rem}
+.tag.open{background:rgba(26,166,90,0.12); color:var(--open)}
+.tag.in_progress{background:rgba(240,165,0,0.12); color:var(--inprog)}
+.tag.closed{background:rgba(154,165,177,0.12); color:var(--closed)}
+.ticket-actions{display:flex; gap:8px; margin-top:8px}
+.toast-root{position:fixed; right:18px; bottom:18px; display:flex; flex-direction:column; gap:8px}
+.toast{padding:10px 14px; border-radius:8px; box-shadow:0 6px 18px rgba(2,6,23,0.08)}
+.toast.success{background:#d1fae5}
+.toast.error{background:#fee2e2}
+.muted{color:#6b7280}
+
+/* Accessibility: visible focus */
+button:focus, a:focus, input:focus, select:focus, textarea:focus{outline:3px solid rgba(52,102,242,0.18); outline-offset:2px}
+
+@media(max-width:900px){
+  .hero-inner{flex-direction:column; text-align:center}
+  .hero-deco .circle{display:none}
+  .tickets-grid{grid-template-columns:1fr}
+}
